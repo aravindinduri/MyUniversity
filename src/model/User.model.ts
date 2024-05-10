@@ -25,8 +25,13 @@ const UserSchema: Schema<User> = new mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
   },
-  
-});
+
+},
+  {
+    timestamps: true,
+  }
+
+);
 
 const UserModel =
   (mongoose.models.User as mongoose.Model<User>) ||
